@@ -30,7 +30,7 @@ steps:
   displayName: 'Compile Sass assets'
 
 - task: gulp@1
-  displayname: 'Compile Sass assets'
+  displayName: 'Compile Sass assets'
 
 - script: 'echo "$(Build.DefinitionName), $(Build.BuildId), $(Build.BuildNumber)" > buildinfo.txt'
   displayName: 'Write build info'
@@ -46,5 +46,5 @@ steps:
   displayName: 'Build the project - Release'
   inputs:
     command: 'build'
-    arguments: '--no-restore --configuratoin Release'
+    arguments: '--no-restore --configuration Release'
     project: '**/*.csproj'
